@@ -1,0 +1,61 @@
+<!--<div class="inside" style="display: none;">-->
+<!--<p data-code-string='if ( wp_is_mobile() == false ) {'></p>-->
+<!--<p class="indent-1" data-code-string='get_sidebar();'></p>-->
+<!--<p data-code-string='} ?&gt;'></p>-->
+<!--<p data-code-string='&lt;div id="primary" class="content-area col s12 m8 l8"&gt;'></p>-->
+<!--<p class="indent-1" data-code-string='&lt;main id="main" class="site-main" role="main"&gt;'></p>-->
+<!--<p class="indent-2">&lt;?php</p>-->
+<!--<p class="indent-2">$args = array(</p>-->
+<!--<p class="indent-3">'cat' =&gt; 30,</p>-->
+<!--<p class="indent-3">'orderby' =&gt; rand,</p>-->
+<!--<p class="indent-3">'post_type' =&gt; 'post',</p>-->
+<!--<p class="indent-3">'post_status' =&gt; 'publish',</p>-->
+<!--<p class="indent-3">'posts_per_page' =&gt; 1,</p>-->
+<!--<p class="indent-3">'caller_get_posts'=&gt; 1</p>-->
+<!--<p class="indent-2">);</p>-->
+<!--<p class="indent-2">$my_query = null;</p>-->
+<!--<p class="indent-2">$my_query = new WP_Query($args);</p>-->
+<!--<p class="indent-2">if( $my_query -&gt; have_posts() ) :</p>-->
+<!--<p class="indent-3">while ( $my_query -&gt; have_posts() ) : $my_query-&gt;the_post(); ?&gt;</p>-->
+<!--<p class="indent-4">&lt;div class="card"&gt;</p>-->
+<!--<p class="indent-5">&lt;?php if ( has_post_thumbnail() ) : ?&gt;</p>-->
+<!--<p class="indent-6">&lt;img src="&lt;?php echo get_the_post_thumbnail() ?&gt;" alt=" &lt;?php echo the_title(); ?&gt;"&gt;</p>-->
+<!--<p class="ident-5">&lt;?php endif;</p>-->
+<!--<p class="indent-5">get_template_part( 'template-parts/content', get_post_format() ); ?&gt;</p>-->
+<!--<p class="indent-5">&lt;/div&gt;&lt;!&#45;&#45; .card &#45;&#45;&gt;</p>-->
+<!--<p class="indent-4">&lt;?php endwhile;</p>-->
+<!--<p class="indent-3">endif;</p>-->
+<!--<p class="indent-3">wp_reset_query();  // Restore global post data stomped by the_post().</p>-->
+<!--<p class="indent-3">if ( have_posts() ) :</p>-->
+<!--<p class="indent-4">if ( is_home() || is_front_page() ) : ?&gt;</p>-->
+<!--<p class="indent-5">&lt;div class="card"&gt;</p>-->
+<!--</div>-->
+<!--<div class="inside">-->
+<!--<p class="indent-6">&lt;header&gt;</p>-->
+<!--<p class="indent-7">&lt;h1 class="page-title screen-reader-text"&gt;&lt;?php single_post_title(); ?&gt;&lt;/h1&gt;</p>-->
+<!--<p class="indent-6">&lt;/header&gt;</p>-->
+<!--<p class="indent-5">&lt;?php endif;</p>-->
+<!--<p class="indent-5">/* Start the Loop */</p>-->
+<!--<p class="indent-5">while ( have_posts() ) : the_post();</p>-->
+<!--<p class="indent-6">/*</p>-->
+<!--<p class="indent-6">* Include the Post-Format-specific template for the content.</p>-->
+<!--<p class="indent-6">* If you want to override this in a child theme, then include a file</p>-->
+<!--<p class="indent-6">* called content-___.php (where ___ is the Post Format name) and that will be used instead.</p>-->
+<!--<p class="indent-6">*/</p>-->
+<!--</div>-->
+<!--<div class="inside">-->
+<!--<p class="indent-6">get_template_part( 'template-parts/content', get_post_format() );</p>-->
+<!--<p class="indent-5">endif;</p>-->
+<!--<p class="indent-4">the_posts_navigation();</p>-->
+<!--<p class="indent-4">else :</p>-->
+<!--<p class="indent-5">get_template_part( 'template-parts/content', 'none' );</p>-->
+<!--<p class="indent-4">endif; ?&gt;</p>-->
+<!--<p class="indent-4">&lt;/div&gt;&lt;!&#45;&#45; .card &#45;&#45;&gt;</p>-->
+<!--<p class="indent-3">&lt;/main&gt;&lt;!&#45;&#45; #main &#45;&#45;&gt;</p>-->
+<!--<p class="indent-3">&lt;/div&gt;&lt;!&#45;&#45; #primary &#45;&#45;&gt;</p>-->
+<!--<p class="indent-2">&lt;?php</p>-->
+<!--<p class="indent-2">if( wp_is_mobile() == true ) {</p>-->
+<!--<p class="indent-3">get_sidebar();</p>-->
+<!--<p class="indent-2">}</p>-->
+<!--<p class="indent-1">get_footer();</p>-->
+<!--</div>-->

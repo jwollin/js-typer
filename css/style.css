@@ -1,0 +1,96 @@
+html, body {
+    font-family: Helvetica Neue, sans-serif;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+.bg-container {
+    font-family: 'menlo' !important;
+    overflow-x: hidden;
+    color: #ccc;
+}
+.indent-1 { padding-left: 1.5em;  }
+.indent-2 { padding-left: 3em;  }
+.indent-3 { padding-left: 4.5em; }
+.indent-4 { padding-left: 6em; }
+.indent-5 { padding-left: 7.5em; }
+.indent-6 { padding-left: 9em; }
+.indent-7 { padding-left: 10.5em; }
+.indent-8 { padding-left: 11em; }
+.bg-container p { font-size: 1em; }
+
+@keyframes flickerAnimation {
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes stopCursor {
+    100% { opacity: 1; }
+}
+@keyframes stopCursor {
+    100% { opacity: 0; }
+    100% { width: 0; }
+}
+header {
+    padding-bottom: 80px;
+    z-index: 25;
+}
+.logo {
+    z-index: 25;
+}
+.cursor {
+    opacity: 0;
+    height: 25px;
+    width: 4px;
+    margin-bottom: 5px;
+    background: black;
+    display: inline-block;
+    animation-duration: .4s;
+    animation-name: flickerAnimation;
+    animation-iteration-count: infinite;
+}
+.cursor.-set {
+    display: inline-block;
+    opacity: 1;
+    width: 4px;
+    background: black;
+    animation-name: setCursor;
+}
+.cursor.-off {
+    display: none;
+    width: 0;
+    animation-name: stopCursor;
+}
+.bg-container {
+    width: 100%;
+    height: 100%;
+    z-index: -25;
+    padding: 15px;
+}
+.over {
+    width: 100%;
+    height: 100%;
+    z-index: -25;
+    position: fixed;
+}
+.logo--main {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+.tac { text-align: center; }
+.font-size-lg { font-size: 50px; }
+.bump-up-xs {
+    margin-bottom: 17px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.font-pal { font-weight: 500; }
+.inner-container {
+    height: 600px;
+    z-index: 25;
+    width: 100%;
+    background: #ccc;
+}
